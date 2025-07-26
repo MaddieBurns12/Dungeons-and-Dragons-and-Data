@@ -20,12 +20,32 @@ CREATE OR REPLACE TABLE Characters (
     constitution INT,
     intelligence INT, 
     wisdom INT,
-    charisma INT
+    charisma INT,
+    spellcaster BOOLEAN
 );
--- Future project table 
--- CREATE TABLE Races (
-    --race_id 
---)
+
+CREATE OR REPLACE TABLE Sepllcasters(
+    character_id INT AUTOINCREMENT START 1 INCREMENT 1,
+    character_name VARCHAR(50),
+    class VARCHAR(20),
+    highest_spell INT,
+    spell_1 INT,
+    spell_2 INT,
+    spell_3 INT,
+    spell_4 INT,
+    spell_5 INT,
+    spell_6 INT,
+    spell_7 INT,
+    spell_8 INT,
+    spell_9 INT,
+);
+
+CREATE OR REPLACE TABLE Races(
+    race_id INT AUTOINCREMENT START 1 INCREMENT 1
+    race_name VARCHAR(50)
+    size VARCHAR(10),
+    speed INT,
+);
 
 CREATE OR REPLACE TABLE Monsters (
     monster_id INT AUTOINCREMENT START 1 INCREMENT 1,
@@ -43,3 +63,4 @@ CREATE OR REPLACE TABLE Players (
     name VARCHAR(50),
     can_dm BOOLEAN,
 );
+
